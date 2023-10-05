@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flip.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="front"> </div>
+            <div class="back">
+                <h1>back of card</h1>
+                <p>additional info of the card</p>
+            </div>
+        </div>
+    </div>
+<script>
+    let card=document.querySelector('.card')
+    card.addEventListener('click',()=>{
+        card.classList.toggle('active')
+    })
+</script>
+</body>
+
+</html>

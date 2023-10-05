@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.container{
+    width: 350px;
+    height: 500px;
+    position: relative;
+    perspective: 600px;
+    perspective-origin: 20px 40px;
+}
+.front,.back{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+/* .container:hover>.card{
+    transform: rotateY(180deg);
+    cursor: pointer;
+} */
+.active{
+    transform: rotateY(-180deg);
+    cursor: pointer;
+}
+.front{
+    background-image: url(hero-desktop.jpg);
+    background-size: calc(350*500);
+    background-position: center;
+    
+}
+.card{
+   width: 100%;
+   transform-style: preserve-3d;
+   transition: transform 1500ms;
+   height: 100%;
+   
+}
+.front img{
+    filter: grayscale(100%);
+   
+}
+.back{
+    background-color: rgb(71, 12, 126);
+    transform: rotateY(-180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1;
+}
